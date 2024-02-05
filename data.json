@@ -1,0 +1,16 @@
+[
+    {
+        
+        "Name": "Flowers",
+        "Description":"Made of silk ribbons",
+        "Price":120.00,
+        "Date Added":"February 5,2024"
+    },
+    {
+        "id": 3,
+        "name": "Product C",
+        "price": 14.99,
+        "description": "A budget-friendly option, product C.",
+        "category": "Home & Kitchen"
+      }
+]
