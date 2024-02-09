@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
-  fetch("products.json")
+  fetch("data.json")
     .then(response => response.json())
     .then(data => {
-      const productsContainer = document.getElementById("products");
+      const productsContainer = document.getElementById("data");
       data.products.forEach(product => {
         const productElement = document.createElement("div");
         productElement.innerHTML = `
