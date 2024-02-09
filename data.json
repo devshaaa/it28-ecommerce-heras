@@ -1,19 +1,19 @@
 {
     "products": [
       {
-        "name": "Product 1",
+        "name": "Smartwatch",
         "price": 19.99,
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        "description": "Stay connected and track fitness goals with our sleek smartwatch."
       },
       {
-        "name": "Product 2",
+        "name": "Wireless Bluetooth Earbuds",
         "price": 29.99,
-        "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "description": "Experience true wireless freedom with crystal-clear sound quality."
       },
       {
-        "name": "Product 3",
+        "name": "Portable Power Bank",
         "price": 39.99,
-        "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "description": "Never run out of battery with our compact and high-capacity power bank."
       }
     ]
   }
