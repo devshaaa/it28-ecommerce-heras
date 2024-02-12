@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const card = document.createElement("div");
         card.className = "card";
         card.innerHTML = `
-          <img src="..." class="card-img-top" alt="...">
+          <img src="${product.image}" class="card-img-top" alt="${product.name}">
           <div class="card-body">
             <h5 class="card-title">${product.name}</h5>
             <p class="card-text">Price: $${product.price.toFixed(2)}</p>
