@@ -1,18 +1,18 @@
 {
   "products": [
     {
-      "product_name": "Pringles",
+      "product_name": "Tuna Bread Roll",
       "product_price": 1.5,
-      "product_description": "Once you pop, the fun don't stop",
-      "product_image": "https://i.ebayimg.com/images/g/JdEAAOSwSM1gykQJ/s-l1200.webp",
+      "product_description": "A Tuna Bread Roll is a delectable handheld snack featuring a soft bread roll filled with a flavorful mixture of tuna, mayonnaise, and optional additions like crunchy vegetables or cheese.",
+      "product_image": "https://previews.123rf.com/images/andreyst/andreyst1710/andreyst171000923/89369339-tuna-bread-roll-with-salad-leaves.jpg",
       "product_dateAdded": "2024-02-14",
       "product_ExpirationDate": "2024-12-31"
     },
     {
-      "product_name": "Tuna Salad Sandwich",
+      "product_name": "Tuna Salad Sandwich with Cheese",
       "product_price": 2.99,
-      "product_description": "Tuna, mayo, celery, bread, classic, satisfying.",
-      "product_image": "https://www.saveur.com/uploads/2019/03/18/G6TABBARLYWYWH36AO72M3S73I.jpg?auto=webp", 
+      "product_description": "A Tuna Salad Sandwich with Cheese is a comforting delight, featuring creamy tuna salad layered between two slices of bread, complemented by melted cheese, creating a savory and satisfying meal.",
+      "product_image": "https://theeburgerdude.com/wp-content/uploads/2024/01/Tuna-Melt-03-2-1024x621.jpg", 
       "product_dateAdded": "2024-02-14",
       "product_ExpirationDate": "2024-03-14"
     },
