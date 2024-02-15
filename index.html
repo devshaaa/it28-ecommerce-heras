@@ -6,19 +6,147 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0JgKbd4x2XZRxlfFXHRBhe9RRk2N5cJ-KXGGknlg7M9zixLJmMQw-hXND-PK-CYmt8_I&usqp=CAU" integrity="sha512-XXWPtV8n8mFw+S3QTyzFQdzvT0VwR7jzYAn9wDz6aRqDXvL1e2skODgNJC2JfpBt+urUa3CLLfCohg3jgZd9uA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Product Website</title>
+
+
+  <style>
+    body {
+      padding: 10px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+
+      max-width: 1400px;
+      margin: auto;
+      padding: 16px 0;
+    }
+
+    header .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      color: #000;
+      cursor: pointer;
+    }
+
+    header ul {
+      display: flex;
+      gap: 10px;
+      list-style: none;
+    }
+    header ul li {
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    header ul li:hover {
+      font-weight: 700;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    
+    header .cart {
+      position: relative;
+    }
+
+    header .cart #count {
+      /* position: relative; */
+      border-radius: 999999999px;
+      background-color: red;
+      height: 20px;
+      width: 20px;
+
+      position: absolute;
+      right: -10px;
+      top: -10px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      color: #fff;
+      font-size: 12px;
+      font-weight: 800;
+
+      display: none;
+    }
+
+    header .cart img  {
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+    }
+
+
+    header ul#cart-items {
+      /* display: flex; */
+      flex-direction: column;
+      position: absolute;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 2px 2px 4px #000;
+      padding: 0;
+      gap: 4px;
+
+      display: none;
+
+      width: 250px;
+      right: 0;
+      z-index: 99999;
+      padding: 10px;
+    }
+
+
+    div#product-cards {
+        gap: 35px;
+    }
+
+    .card {
+        border: 1px solid #d6d6d6 !important;
+    }
+  </style>
 </head>
 <body>
+
+  <header>
+
+    <a class="logo" href="/">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA4klEQVR4nO2VTQrCMBCF396dXsC9l+jS6lrtsjfzKD1F10KiN+g+MjCFsThNUlJbMA8GOj/JlxlKAmQtqDOAJwCXyCyAMgRsE0J7MyFgN5ONqhaFjYjvPZvIHNX2akS81qAHAJ0oLJQD+cASUIh4x4wPbQC0SrekewSYaqF03TJL3Vh2S3pEgKkWStdueDDr+QNj8jZmfclJCh6/LAzNvwCcJqxfTlsAVwAVf5PdBn7FsRB/x/6F/Z9fHs53iWSwptARTh61pgzWlEetKvXFsH6wnRFsxsD985UabFb3HOJv9AZbAGphq7Gb8wAAAABJRU5ErkJggg==">
+      Tuna Empire
+    </a>
+
+    <!-- <ul>
+      <li>Home</li>
+      <li>About Us</li>
+      <li>Contact Us</li>
+    </ul> -->
+
+    <div>
+      <a class="cart" href="">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAABdklEQVR4nO2YvUrEQBRGjyhbWNhoLfb6Altrr2ApvoOwiNgpEjeCvoC2Yilir53F9mLrD+5aaePv7gpXFqaQIYqZTJwbmANfE7jhfMxkEgKRSCSihW3gHRCTZ+ACWKQCDBlh+SEJFSCxVsBOnYoxBhx/K7BPBan/siKh8gFs/bXAKPCpQFqsvORZhSsFwmLlMk+BIwXCYuUwT4FVBcJipZGnwJwCYbEym6fAuAJhsTJBTu4USIvJLQ6cKhAXkxOXApsKxMVkw6XAggJxMZl3KTClQFxMJl0/tx8VyD8ZFyfOFRQ4owB7CgrsFimwrKDAUpECMwoKTBcpMAy8BpR/A0YoSCtggRaefr2EKpD4KDB4oXUDyHddX2BZNAIUWMEz60D/H8T7wBolMThWD4AboOdRugdcm3sXOjYjVaIG7AAdoA2k5lpZc95JM/ZyWuKcdzoZIg8lznmnnSFyX+Kcd7K2QrPEOe/UjEzb4SFOHeYikUgEHXwBuF1wkXezgGIAAAAASUVORK5CYII=">
+        
+        <span id="count">1</span>
+        <ul id="cart-items"></ul>
+      </a>
+    </div>
+
+  </header>
+
+
   <h1 style="text-align: center; color: rgb(23, 1, 35);">Tuna Bread Products</h1>
+
 
   <div class="container" id="product-cards"></div>
 
   <div id="cart">
     <h2><i class="fas fa-shopping-cart"></i> Shopping Cart</h2> <!-- Added cart icon here -->
     <p id="cartCount"></p>
-    <ul id="cart-items"></ul>
   </div>
 
-  <script src="app.js"></script>
+  <script src="/app.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>

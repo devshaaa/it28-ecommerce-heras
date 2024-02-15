@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-  fetch("data.json")
+  fetch("/data.json")
     .then(response => response.json())
     .then(data => {
       const productCardsContainer = document.getElementById("product-cards");
@@ -41,15 +41,39 @@ document.addEventListener("DOMContentLoaded", function() {
       // Function to update the cart display
       function updateCartDisplay() {
         cartItemsContainer.innerHTML = "";
+
         Object.keys(cart).forEach(productName => {
           const quantity = cart[productName];
           const li = document.createElement("li");
           li.textContent = `${productName}: ${quantity}`;
           cartItemsContainer.appendChild(li);
         });
+
+
+        // Update the count element to display the number of unique items in the cart
+        document.getElementById('count').style.display = 'flex'; // Assuming you're using flexbox
+        document.getElementById('count').innerText = Object.keys(cart).length;
       }
     })
     .catch(error => {
       console.error("Error fetching products:", error);
     });
+
+
+
+    const cartLink = document.querySelector('.cart');
+    const cartItems = document.getElementById('cart-items');
+    
+    // Prevent default behavior on click
+    cartLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        // Toggle display of cart items
+        if (cartItems.style.display === 'none') {
+            cartItems.style.display = 'flex';
+        } else {
+            cartItems.style.display = 'none';
+        }
+    });
+
+
 });
