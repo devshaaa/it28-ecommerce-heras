@@ -5,24 +5,24 @@
       "product_price": 1.5,
       "product_description": "Once you pop, the fun don't stop",
       "product_image": "https://i.ebayimg.com/images/g/JdEAAOSwSM1gykQJ/s-l1200.webp",
-      "product_dateAdded": "2023-02-14",
-      "product_ExpirationDate": "2023-12-31"
+      "product_dateAdded": "2024-02-14",
+      "product_ExpirationDate": "2024-12-31"
     },
     {
-      "product_name": "Wireless Bluetooth Earbuds",
-      "product_price": 29.99,
-      "product_description": "Experience true wireless freedom with crystal-clear sound quality.",
-      "product_image": "https://example.com/earbuds.jpg", 
-      "product_dateAdded": "2023-02-14",
-      "product_ExpirationDate": "2023-12-31"
+      "product_name": "Tuna Salad Sandwich",
+      "product_price": 2.99,
+      "product_description": "Tuna, mayo, celery, bread, classic, satisfying.",
+      "product_image": "https://www.saveur.com/uploads/2019/03/18/G6TABBARLYWYWH36AO72M3S73I.jpg?auto=webp", 
+      "product_dateAdded": "2024-02-14",
+      "product_ExpirationDate": "2024-03-14"
     },
     {
-      "product_name": "Portable Power Bank",
-      "product_price": 39.99,
-      "product_description": "Never run out of battery with our compact and high-capacity power bank.",
-      "product_image": "https://example.com/power-bank.jpg", 
-      "product_dateAdded": "2023-02-14",
-      "product_ExpirationDate": "2023-12-31"
+      "product_name": "Tuna Pie",
+      "product_price": 3.99,
+      "product_description": "A tuna pie is a savory pastry filled with a creamy mixture of tuna, vegetables, and seasonings, baked until golden and delicious.",
+      "product_image": "https://yummykitchentv.com/wp-content/uploads/2021/01/tuna-bread-pie.jpg", 
+      "product_dateAdded": "2024-02-14",
+      "product_ExpirationDate": "2024-03-01"
     }
   ]
 }
