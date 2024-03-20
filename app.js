@@ -49,6 +49,29 @@ document.addEventListener("DOMContentLoaded", function() {
           cartItemsContainer.appendChild(li);
         });
 
+         // Function to handle delivery tracking form submission
+  document.getElementById("deliveryTrackingForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    // Get the tracking number entered by the user
+    var trackingNumber = document.getElementById("trackingNumber").value;
+
+    // Simulate tracking functionality (replace this with actual tracking logic)
+    var trackingStatus = trackDelivery(trackingNumber);
+
+    // Display tracking results to the user
+    var trackingResultsDiv = document.getElementById("trackingResults");
+    trackingResultsDiv.innerHTML = "<p>Tracking Number: " + trackingNumber + "</p>" +
+                                    "<p>Status: " + trackingStatus + "</p>";
+  });
+
+  // Function to simulate tracking (replace this with actual tracking logic)
+  function trackDelivery(trackingNumber) {
+    // Simulate tracking status (randomly generate "Delivered" or "In Transit")
+    var statuses = ["Delivered", "In Transit"];
+    var randomIndex = Math.floor(Math.random() * statuses.length);
+    return statuses[randomIndex];
+  }
 
         // Update the count element to display the number of unique items in the cart
         document.getElementById('count').style.display = 'flex'; // Assuming you're using flexbox
@@ -64,6 +87,37 @@ document.addEventListener("DOMContentLoaded", function() {
     const cartLink = document.querySelector('.cart');
     const cartItems = document.getElementById('cart-items');
     
+    // JavaScript code for product inventory section
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Fetch data data from JSON file
+  fetch("data.json")
+    .then(response => response.json())
+    .then(data => {
+      const productCardsContainer = document.getElementById("product-cards");
+
+      // Loop through each product and generate product card
+      data.products.forEach(product => {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+          <img src="${product.product_image}" class="card-img-top" alt="${product.product_name}">
+          <div class="card-body">
+            <h5 class="card-title">${product.product_name}</h5>
+            <p class="card-text">${product.product_description}</p>
+            <p class="card-text">Price: $${product.product_price.toFixed(2)}</p>
+            <p class="card-text"><small class="text-body-secondary">Date Added: ${product.product_dateAdded}</small></p>
+            <p class="card-text"><small class="text-body-secondary">Expiration Date: ${product.product_ExpirationDate}</small></p>
+          </div>
+        `;
+        productCardsContainer.appendChild(card);
+      });
+    })
+    .catch(error => {
+      console.error("Error fetching products:", error);
+    });
+});
+
     // Prevent default behavior on click
     cartLink.addEventListener('click', function(event) {
         event.preventDefault();
