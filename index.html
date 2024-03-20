@@ -10,141 +10,138 @@
 <body>
 
   <!-- Header Section -->
-  <header>
-    <a class="logo" href="/">
-      <img src="">
-      Tuna Empire
-    </a>
-
-    <!-- Cart Section -->
-    <div>
-      <a class="cart" href="">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAABdklEQVR4nO2YvUrEQBRGjyhbWNhoLfb6Altrr2ApvoOwiNgpEjeCvoC2Yilir53F9mLrD+5aaePv7gpXFqaQIYqZTJwbmANfE7jhfMxkEgKRSCSihW3gHRCTZ+ACWKQCDBlh+SEJFSCxVsBOnYoxBhx/K7BPBan/siKh8gFs/bXAKPCpQFqsvORZhSsFwmLlMk+BIwXCYuUwT4FVBcJipZGnwJwCYbEym6fAuAJhsTJBTu4USIvJLQ6cKhAXkxOXApsKxMVkw6XAggJxMZl3KTClQFxMJl0/tx8VyD8ZFyfOFRQ4owB7CgrsFimwrKDAUpECMwoKTBcpMAy8BpR/A0YoSCtggRaefr2EKpD4KDB4oXUDyHddX2BZNAIUWMEz60D/H8T7wBolMThWD4AboOdRugdcm3sXOjYjVaIG7AAdoA2k5lpZc95JM/ZyWuKcdzoZIg8lznmnnSFyX+Kcd7K2QrPEOe/UjEzb4SFOHeYikUgEHXwBuF1wkXezgGIAAAAASUVORK5CYII=">
-        <span id="count">1</span>
-        <ul id="cart-items"></ul>
+  <div class="container-fluid">
+    <header>
+      <a class="logo" href="/">
+        <img src="/img/tuna.png" width="100">
+        Tuna Empire
       </a>
-    </div>
-  </header>
+
+      <!-- Navigation Links -->
+      <nav>
+        <ul>
+          <li><button class="btn btn-light" onclick="showSection('product-inventory')">Product Inventory</button></li>
+          <li><button class="btn btn-light" onclick="showSection('logistics')">Logistics</button></li>
+          <li><button class="btn btn-light" onclick="showSection('payment-accounting')">Payment & Accounting</button></li>
+          <li><button class="btn btn-light" onclick="showSection('customer-services')">Customer Services</button></li>
+          <li><button class="btn btn-light" onclick="showSection('reports')">Reports</button></li>
+        </ul>
+      </nav>
+
+      <!-- Cart Section -->
+      <div>
+        <a class="cart" href="">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAABdklEQVR4nO2YvUrEQBRGjyhbWNhoLfb6Altrr2ApvoOwiNgpEjeCvoC2Yilir53F9mLrD+5aaePv7gpXFqaQIYqZTJwbmANfE7jhfMxkEgKRSCSihW3gHRCTZ+ACWKQCDBlh+SEJFSCxVsBOnYoxBhx/K7BPBan/siKh8gFs/bXAKPCpQFqsvORZhSsFwmLlMk+BIwXCYuUwT4FVBcJipZGnwJwCYbEym6fAuAJhsTJBTu4USIvJLQ6cKhAXkxOXApsKxMVkw6XAggJxMZl3KTClQFxMJl0/tx8VyD8ZFyfOFRQ4owB7CgrsFimwrKDAUpECMwoKTBcpMAy8BpR/A0YoSCtggRaefr2EKpD4KDB4oXUDyHddX2BZNAIUWMEz60D/H8T7wBolMThWD4AboOdRugdcm3sXOjYjVaIG7AAdoA2k5lpZc95JM/ZyWuKcdzoZIg8lznmnnSFyX+Kcd7K2QrPEOe/UjEzb4SFOHeYikUgEHXwBuF1wkXezgGIAAAAASUVORK5CYII=">
+          <span id="count">1</span>
+          <ul id="cart-items"></ul>
+        
+        </a>
+      </div>
+    </header>
+  </div>
 
   <!-- Main Content Section -->
   <main>
-    <!-- Buttons Section -->
-    <section id="buttons">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-2">
-            <button class="btn btn-light" onclick="showSection('product-inventory')">Product Inventory</button>
-          </div>
-          <div class="col-md-2">
-            <button class="btn btn-light" onclick="showSection('logistics')">Logistics</button>
-          </div>
-          <div class="col-md-2">
-            <button class="btn btn-light" onclick="showSection('payment-accounting')">Payment & Accounting</button>
-          </div>
-          <div class="col-md-2">
-            <button class="btn btn-light" onclick="showSection('customer-services')">Customer Services</button>
-          </div>
-          <div class="col-md-2">
-            <button class="btn btn-light" onclick="showSection('reports')">Reports</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Product Inventory Section -->
     <section id="product-inventory" style="display: none;">
       <h1 style="text-align: center; color: rgb(23, 1, 35);">Tuna Bread Products</h1>
       <div class="container" id="product-cards"></div>
     </section>
 
-   <!-- Logistics Section -->
-<section id="logistics" style="display: none;">
-  <div class="container">
-    <h2>Logistics</h2>
-    <p>This section handles the logistics functionalities of the website.</p>
-    <!-- Delivery Tracking Form -->
-    <div class="row">
-      <div class="col-md-6">
-        <h3>Delivery Tracking</h3>
-        <form id="deliveryTrackingForm">
-          <div class="mb-3">
-            <label for="trackingNumber" class="form-label">Tracking Number:</label>
-            <input type="text" class="form-control" id="trackingNumber" required>
-          </div>
-          <button type="submit" class="btn btn-primary">Track Delivery</button>
-        </form>
-        <div id="trackingResults"></div>
-      </div>
-    </div>
+    <!-- Logistics Section -->
+<section id="logistics" style="display: none; text-align: center;" >
+  <h2>Logistics</h2>
+  <p>This section handles logistics functionality such as shipping, tracking, and inventory management.</p>
+  
+  <!-- Shipping Form -->
+  <div>
+    <label for="shipping-address">Shipping Address:</label>
+    <input type="text" id="shipping-address">
+    <button onclick="shipItem()">Ship Item</button>
   </div>
-</section>
 
+  <!-- Tracking Form -->
+  <div>
+    <label for="tracking-number">Enter Tracking Number:</label>
+    <input type="text" id="tracking-number">
+    <button onclick="trackOrder()">Track</button>
+  </div>
 
-    <!-- Payment and Accounting Section -->
-<section id="payment-accounting" style="display: none;">
-  <div class="container">
-    <h2>Payment and Accounting</h2>
-    <p>This section handles payment and accounting functionalities.</p>
-    
-    <!-- Payment Form -->
-    <div class="row">
-      <div class="col-md-6">
-        <h3>Make Payment</h3>
-        <form id="paymentForm">
-          <div class="mb-3">
-            <label for="cardNumber" class="form-label">Card Number:</label>
-            <input type="text" class="form-control" id="cardNumber" required>
-          </div>
-          <div class="mb-3">
-            <label for="expiryDate" class="form-label">Expiry Date:</label>
-            <input type="text" class="form-control" id="expiryDate" required>
-          </div>
-          <div class="mb-3">
-            <label for="cvv" class="form-label">CVV:</label>
-            <input type="text" class="form-control" id="cvv" required>
-          </div>
-          <button type="submit" class="btn btn-primary">Submit Payment</button>
-        </form>
-        <div id="paymentStatus"></div>
-      </div>
-    </div>
+  <!-- Inventory Management -->
+  <div>
+    <h3>Inventory Management</h3>
+    <p>Check current inventory levels:</p>
+    <button onclick="checkInventory()">Check Inventory</button>
   </div>
 </section>
 
 <script>
-  // Function to handle payment form submission
-  document.getElementById("paymentForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent default form submission
+  // Function to handle shipping an item
+  function shipItem() {
+    var shippingAddress = document.getElementById('shipping-address').value;
+    // Here you would add code to actually process the shipping
+    alert("Item shipped to: " + shippingAddress);
+  }
 
-    // Get payment details entered by the user
-    var cardNumber = document.getElementById("cardNumber").value;
-    var expiryDate = document.getElementById("expiryDate").value;
-    var cvv = document.getElementById("cvv").value;
+  // Function to track an order
+  function trackOrder() {
+    var trackingNumber = document.getElementById('tracking-number').value;
+    // Here you would add code to fetch and display tracking information
+    alert("Tracking number: " + trackingNumber);
+  }
 
-    // Simulate payment processing (replace this with actual payment processing logic)
-    var paymentStatus = processPayment(cardNumber, expiryDate, cvv);
+  // Function to check inventory
+  function checkInventory() {
+    // Here you would add code to fetch and display current inventory levels
+    alert("Inventory checked");
+  }
+</script>
 
-    // Display payment status to the user
-    var paymentStatusDiv = document.getElementById("paymentStatus");
-    paymentStatusDiv.innerHTML = "<p>Payment Status: " + paymentStatus + "</p>";
-  });
 
-  // Function to simulate payment processing (replace this with actual payment processing logic)
-  function processPayment(cardNumber, expiryDate, cvv) {
-    // Simulate payment processing (returning a success message)
-    return "Payment Successful";
+    <!-- Payment and Accounting Section -->
+<section id="payment-accounting" style="display: none;text-align: center;">
+  <h2>Payment and Accounting</h2>
+  <p>This section handles payment processing and accounting tasks.</p>
+  
+  <!-- Payment Form -->
+  <div>
+    <label for="payment-amount">Enter Payment Amount:</label>
+    <input type="number" id="payment-amount">
+    <button onclick="processPayment()">Process Payment</button>
+  </div>
+
+  <!-- Accounting Information -->
+  <div>
+    <h3>Accounting</h3>
+    <p>View financial reports:</p>
+    <button onclick="viewReports()">View Reports</button>
+  </div>
+</section>
+
+<script>
+  // Function to process payment
+  function processPayment() {
+    var paymentAmount = document.getElementById('payment-amount').value;
+    // Here you would add code to process the payment
+    alert("Payment processed for amount: $" + paymentAmount);
+  }
+
+  // Function to view financial reports
+  function viewReports() {
+    // Here you would add code to fetch and display financial reports
+    alert("Viewing financial reports");
   }
 </script>
 
 
     <!-- Customer Services Section -->
-    <section id="customer-services" style="display: none;">
+    <section id="customer-services" style="display: none;text-align: center;">
       <h2>Customer Services</h2>
       <!-- Include customer services functionality -->
     </section>
 
     <!-- Reports Section -->
-    <section id="reports" style="display: none;">
+    <section id="reports" style="display: none;text-align: center;">
       <h2>Reports</h2>
       <!-- Include reports functionality -->
     </section>
