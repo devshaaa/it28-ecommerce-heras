@@ -21,8 +21,8 @@
       <nav>
         <ul>
           <li><button class="btn btn-light" onclick="showSection('product-inventory')">Product Inventory</button></li>
-          <li><button class="btn btn-light" onclick="showSection('logistics')">Logistics</button></li>
           <li><button class="btn btn-light" onclick="showSection('payment-accounting')">Payment & Accounting</button></li>
+          <li><button class="btn btn-light" onclick="showSection('logistics')">Logistics</button></li>
           <li><button class="btn btn-light" onclick="showSection('customer-services')">Customer Services</button></li>
           <li><button class="btn btn-light" onclick="showSection('reports')">Reports</button></li>
         </ul>
@@ -34,7 +34,6 @@
           <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAABdklEQVR4nO2YvUrEQBRGjyhbWNhoLfb6Altrr2ApvoOwiNgpEjeCvoC2Yilir53F9mLrD+5aaePv7gpXFqaQIYqZTJwbmANfE7jhfMxkEgKRSCSihW3gHRCTZ+ACWKQCDBlh+SEJFSCxVsBOnYoxBhx/K7BPBan/siKh8gFs/bXAKPCpQFqsvORZhSsFwmLlMk+BIwXCYuUwT4FVBcJipZGnwJwCYbEym6fAuAJhsTJBTu4USIvJLQ6cKhAXkxOXApsKxMVkw6XAggJxMZl3KTClQFxMJl0/tx8VyD8ZFyfOFRQ4owB7CgrsFimwrKDAUpECMwoKTBcpMAy8BpR/A0YoSCtggRaefr2EKpD4KDB4oXUDyHddX2BZNAIUWMEz60D/H8T7wBolMThWD4AboOdRugdcm3sXOjYjVaIG7AAdoA2k5lpZc95JM/ZyWuKcdzoZIg8lznmnnSFyX+Kcd7K2QrPEOe/UjEzb4SFOHeYikUgEHXwBuF1wkXezgGIAAAAASUVORK5CYII=">
           <span id="count">1</span>
           <ul id="cart-items"></ul>
-        
         </a>
       </div>
     </header>
@@ -49,53 +48,33 @@
     </section>
 
     <!-- Logistics Section -->
-<section id="logistics" style="display: none; text-align: center;" >
-  <h2>Logistics</h2>
-  <p>This section handles logistics functionality such as shipping, tracking, and inventory management.</p>
-  
-  <!-- Shipping Form -->
-  <div>
-    <label for="shipping-address">Shipping Address:</label>
-    <input type="text" id="shipping-address">
-    <button onclick="shipItem()">Ship Item</button>
-  </div>
+<section id="logistics" style="display: none;text-align: center;">
+  <div class="container">
+    <h2>Shipping Information</h2>
+    <div class="shipping-methods">
+      <div class="shipping-method">
+        <h3>Standard Shipping</h3>
+        <p>Estimated delivery: 5-7 days</p>
+        <p>Rate: $5.99</p>
+        <button onclick="selectShippingMethod('Standard Shipping')">Select</button>
+      </div>
+      <div class="shipping-method">
+        <h3>Express Shipping</h3>
+        <p>Estimated delivery: 2-3 days</p>
+        <p>Rate: $12.99</p>
+        <button onclick="selectShippingMethod('Express Shipping')">Select</button>
+      </div>
+      <div class="shipping-method">
+        <h3>Overnight Shipping</h3>
+        <p>Estimated delivery: Next day</p>
+        <p>Rate: $24.99</p>
+        <button onclick="selectShippingMethod('Overnight Shipping')">Select</button>
+      </div>
+    </div>
 
-  <!-- Tracking Form -->
-  <div>
-    <label for="tracking-number">Enter Tracking Number:</label>
-    <input type="text" id="tracking-number">
-    <button onclick="trackOrder()">Track</button>
-  </div>
-
-  <!-- Inventory Management -->
-  <div>
-    <h3>Inventory Management</h3>
-    <p>Check current inventory levels:</p>
-    <button onclick="checkInventory()">Check Inventory</button>
+    <div id="selected-method"></div>
   </div>
 </section>
-
-<script>
-  // Function to handle shipping an item
-  function shipItem() {
-    var shippingAddress = document.getElementById('shipping-address').value;
-    // Here you would add code to actually process the shipping
-    alert("Item shipped to: " + shippingAddress);
-  }
-
-  // Function to track an order
-  function trackOrder() {
-    var trackingNumber = document.getElementById('tracking-number').value;
-    // Here you would add code to fetch and display tracking information
-    alert("Tracking number: " + trackingNumber);
-  }
-
-  // Function to check inventory
-  function checkInventory() {
-    // Here you would add code to fetch and display current inventory levels
-    alert("Inventory checked");
-  }
-</script>
 
 
     <!-- Payment and Accounting Section -->
@@ -135,10 +114,17 @@
 
 
     <!-- Customer Services Section -->
-    <section id="customer-services" style="display: none;text-align: center;">
-      <h2>Customer Services</h2>
-      <!-- Include customer services functionality -->
-    </section>
+<section id="customer-services" style="display: none;text-align: center;">
+  <h2>Customer Services</h2>
+  <!-- Chat Button -->
+  <button id="chatButton" onclick="openChat()">Chat with Us</button>
+  <!-- Chat Box -->
+  <div id="chatBox" style="display: none;">
+    <div id="chatMessages"></div>
+    <input type="text" id="chatInput" placeholder="Type your message...">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</section>
 
     <!-- Reports Section -->
     <section id="reports" style="display: none;text-align: center;">

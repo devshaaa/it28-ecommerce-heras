@@ -2,6 +2,11 @@
 
 body {
   padding: 10px;
+  background-color: #ffffff; /* Set a background color */
+  /* OR */
+  background-image: url('path/to/your/image.jpg'); /* Set a background image */
+  background-size: cover; /* Optional: Cover the entire viewport */
+  background-repeat: no-repeat; /* Optional: Prevent repeating the background image */
 }
 
 header {
@@ -9,7 +14,8 @@ header {
   justify-content: space-between;
   max-width: 1400px;
   margin: auto;
-  padding: 16px 0;
+  background-color: #f8e537; /* Set text color */
+  padding: 20px; /* Add padding for spacing */
 }
 
 header .logo {
@@ -100,7 +106,7 @@ div#product-cards {
 }
 
 .card {
-  border: 1px solid #d6d6d6 !important;
+  border: 1px solid #caff84 !important;
 }
 .logistics-form-container {
   display: flex;
@@ -113,4 +119,33 @@ div#product-cards {
 
 .logistics-form-container div {
   margin-bottom: 10px; /* Adjust margin between form elements */
+}
+/* Style for chat box */
+#chatBox {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+/* Style for chat messages */
+#chatMessages {
+  height: 200px;
+  overflow-y: scroll;
+  margin-bottom: 10px;
+}
+
+/* Style for chat input */
+#chatInput {
+  width: 80%;
+  padding: 5px;
+  margin-right: 5px;
+}
+
+/* Style for chat button */
+#chatButton {
+  background-color: #b166e4;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
 }

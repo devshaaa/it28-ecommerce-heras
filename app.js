@@ -37,7 +37,9 @@ document.addEventListener("DOMContentLoaded", function() {
           updateCartDisplay();
         }
       });
-
+      function selectShippingMethod(method) {
+        document.getElementById('selected-method').innerHTML = `<p>Selected Shipping Method: <strong>${method}</strong></p>`;
+      }
       // Function to update the cart display
       function updateCartDisplay() {
         cartItemsContainer.innerHTML = "";
@@ -72,6 +74,26 @@ document.addEventListener("DOMContentLoaded", function() {
     var randomIndex = Math.floor(Math.random() * statuses.length);
     return statuses[randomIndex];
   }
+// Open chat box function
+function openChat() {
+  var chatBox = document.getElementById('chatBox');
+  chatBox.style.display = 'block';
+}
+
+// Send message function
+function sendMessage() {
+  var messageInput = document.getElementById('chatInput');
+  var message = messageInput.value;
+  var chatMessages = document.getElementById('chatMessages');
+  
+  // Display message in chat box
+  var newMessage = document.createElement('div');
+  newMessage.textContent = message;
+  chatMessages.appendChild(newMessage);
+  
+  // Clear message input
+  messageInput.value = '';
+}
 
         // Update the count element to display the number of unique items in the cart
         document.getElementById('count').style.display = 'flex'; // Assuming you're using flexbox
