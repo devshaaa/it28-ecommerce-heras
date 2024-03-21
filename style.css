@@ -1,151 +1,176 @@
-/* Custom styles for the header section */
-
-body {
-  padding: 10px;
-  background-color: #ffffff; /* Set a background color */
-  /* OR */
-  background-image: url('path/to/your/image.jpg'); /* Set a background image */
-  background-size: cover; /* Optional: Cover the entire viewport */
-  background-repeat: no-repeat; /* Optional: Prevent repeating the background image */
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  max-width: 1400px;
-  margin: auto;
-  background-color: #f8e537; /* Set text color */
-  padding: 20px; /* Add padding for spacing */
-}
-
-header .logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  font-weight: 600;
-  color: #000;
-  cursor: pointer;
-  font-family: Arial, sans-serif; /* Specify font */
-}
-
-header ul {
-  display: flex;
-  gap: 10px;
-  list-style: none;
-}
-
-header ul li {
-  font-weight: 600;
-  font-size: 16px;
-  font-family: Arial, sans-serif; /* Specify font */
-}
-
-header ul li:hover {
-  font-weight: 700;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-header .cart {
-  position: relative;
-}
-
-header .cart #count {
-  border-radius: 999999999px;
-  background-color: red;
-  height: 20px;
-  width: 20px;
-  position: absolute;
-  right: -10px;
-  top: -10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  font-size: 12px;
-  font-weight: 800;
-  display: none;
-}
-
-header .cart img {
-  width: 30px;
-  height: 30px;
-  object-fit: contain;
-}
-
-header ul#cart-items {
-  flex-direction: column;
-  position: absolute;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 2px 2px 4px #000;
+* {
+  margin: 0;
   padding: 0;
-  gap: 4px;
-  display: none;
-  width: 250px;
-  right: 0;
-  z-index: 99999;
-  padding: 10px;
-}
-
-.container-fluid {
-  padding: 10px; /* Add padding to the container */
-  background-color: #f8f9fa; /* Set background color */
-  font-family: Arial, sans-serif; /* Specify font */
-}
-
-header {
-  display: flex; /* Use flexbox for layout */
-  justify-content: space-between; /* Align items to the start and end of the header */
-  align-items: center; /* Center items vertically */
-}
-
-div#product-cards {
-  gap: 35px;
-}
-
-.card {
-  border: 1px solid #caff84 !important;
-}
-.logistics-form-container {
+  box-sizing: border-box;
+  }
+  body {
+  font-family: 'Poppins', san-serif;
+  }
+  .navbar {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin-top: 20px; /* Adjust margin as needed */
-}
+  padding: 20px;
+  
+  }
+  nav{
+  flex: 1;
+  text-align: right;
+  }
+ 
+  nav ul {
+  display: inline-block;
+  list-style-type: none; 
+  padding: 0;
+  margin: 0;
+  }
+  nav ul li {
+  display: inline-block;
+  margin-right: 20px;
 
-.logistics-form-container div {
-  margin-bottom: 10px; /* Adjust margin between form elements */
-}
-/* Style for chat box */
-#chatBox {
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin-top: 10px;
-}
-
-/* Style for chat messages */
-#chatMessages {
-  height: 200px;
-  overflow-y: scroll;
-  margin-bottom: 10px;
-}
-
-/* Style for chat input */
-#chatInput {
-  width: 80%;
-  padding: 5px;
-  margin-right: 5px;
-}
-
-/* Style for chat button */
-#chatButton {
-  background-color: #b166e4;
+  }
+  a {
+  text-decoration: none;
+  color: #555
+  }
+  nav ul li a:hover {
+      color: blue; 
+    }
+  p {
+  color: #555;
+  }
+  .container {
+  max-width: 1300px;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+  }
+  .row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  }
+  .col-2{
+  flex-basis: 50;
+  min-width: 300px;
+  }
+  .col-2 img {
+  max-width: 100px;
+  padding: 50px 0;
+  }
+  .col-2 h1 {
+  font-size: 50px;
+  line-height: 60px;
+  margin: 25px 0;
+  }
+  .btn {
+  display: inline-block;
+  background: #ff523b;
   color: #fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
+  padding: 8px 30px;
+  margin: 30px 0; 
+  border-radius: 30px;
+  
+  } 
+  .btn:hover {
+  background: #563434;
+  }
+  .header {
+    background: radial-gradient(#070007, #ffd6d6);
+    background-image: url('/img/tunafish.jpg');
+    background-repeat: repeat repeat; /* Repeat image horizontally and vertically */
+    background-size: auto; /* Adjust as needed */
+    background-position: center; /* Adjust as needed */
+  }
+  
+  .header .row {
+  margin-top: 70px;
+  }
+  .categories {
+  margin: 70px;
+  }
+  .col-3 {
+  flex-basis: 30%;
+  min-width: 250px;
+  margin-bottom: 30px;
+  }
+  .col-3 img {
+  width: 100%;
+  }
+  .small-container {
+  max-width: 1080px;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+  }
+  .col-4 {
+  flex-basis: 25%;
+  padding: 10px;
+  min-width: 200px;
+  margin-bottom: 50px;
+  transition: transform 0.5s;
+  }
+  .col-4 img {
+  width: 100%;
+  }
+  .title {
+  text-align: center;
+  margin: 0 auto 80px;
+  position: relative;
+  line-height: 60px;
+  color: #555;
+  }
+  .title::after {
+  content: ' ';
+  background: #ff523b;
+  width: 80px;
+  height: 5px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  }
+  h4 {
+  color: #555;
+  font-weight: bold;
+  }
+  .col-4 p {
+  font-size: 14px;
+  }
+  .rating .fa {
+  color: #ff523b;
+  }
+  .col-4:hover {
+  transform: translateY(-5px);
+  }
+ 
+  /* Add this CSS to style the button container */
+.button-container {
+  background-color: beige;
+  padding: 10px; /* Adjust padding as needed */
+  border-radius: 3px; /* Optional: Add rounded corners */
+  display: flex; /* Make the container flexbox */
+  justify-content: space-between; /* Arrange buttons with equal space between */
+}
+
+.button-container ul {
+  list-style-type: none; /* Remove default bullet points */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.button-container ul li {
+  display: inline; /* Display buttons horizontally */
+}
+
+.button-container ul li a {
+  text-decoration: none; /* Remove underline from links */
+  color: black; /* Set text color */
+  padding: 5px 10px; /* Add padding to buttons */
+}
+
+.button-container ul li a:hover {
+  background-color: #ddd; /* Change background color on hover */
+  border-radius: 5px; /* Optional: Add rounded corners on hover */
 }
