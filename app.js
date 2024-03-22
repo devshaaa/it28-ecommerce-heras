@@ -1,3 +1,38 @@
+function addToCart(productName, price) {
+    // Make AJAX request to add item to cart
+    fetch('/api/add-to-cart', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ productName, price })
+    })
+    .then(response => {
+        // Handle response (e.g., show success message)
+    })
+    .catch(error => {
+        // Handle error
+    });
+}
+
+function buyNow(productName, price) {
+    // Make AJAX request to initiate payment process
+    fetch('/api/checkout', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ productName, price })
+    })
+    .then(response => {
+        // Redirect user to payment gateway's checkout page
+        window.location.href = response.redirectUrl;
+    })
+    .catch(error => {
+        // Handle error
+    });
+}
+
 document.addEventListener("DOMContentLoaded", function() {
   // Function to process payment and accounting
   function processPaymentAndAccounting() {

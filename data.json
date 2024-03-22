@@ -1,0 +1,61 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "Tuna Sandwich Version One",
+        "price": 70.00,
+        "image": "img/05.jpg",
+        "description": "Delicious tuna sandwich version one."
+      },
+      {
+        "id": 2,
+        "name": "Tuna Sandwich Version 1.1",
+        "price": 65.00,
+        "image": "img/06.jpg",
+        "description": "Savory tuna sandwich version 1.1."
+      },
+      {
+        "id": 3,
+        "name": "Tuna Sandwich Version 1.2",
+        "price": 85.00,
+        "image": "img/07.jpg",
+        "description": "Tasty tuna sandwich version 1.2."
+      },
+      {
+        "id": 4,
+        "name": "Tuna Sandwich Version 2",
+        "price": 80.00,
+        "image": "img/08.jpg",
+        "description": "Flavorful tuna sandwich version 2."
+      },
+      {
+        "id": 5,
+        "name": "Brown Tops",
+        "price": 50.00,
+        "image": "img/09.jpg",
+        "description": "Stylish brown tops for every occasion."
+      },
+      {
+        "id": 6,
+        "name": "White Hart Tops",
+        "price": 60.00,
+        "image": "img/10.jpg",
+        "description": "Elegant white hart tops to elevate your look."
+      },
+      {
+        "id": 7,
+        "name": "Ray Colt Tops",
+        "price": 90.00,
+        "image": "img/11.jpg",
+        "description": "Classy ray colt tops for a sophisticated style."
+      },
+      {
+        "id": 8,
+        "name": "Mint Green Tops",
+        "price": 95.00,
+        "image": "img/13.jpg",
+        "description": "Refreshing mint green tops for a trendy look."
+      }
+    ]
+  }
+  
