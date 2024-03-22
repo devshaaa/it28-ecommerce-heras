@@ -59,6 +59,10 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log("Price: $" + price);
         // You can also redirect the user to the checkout page or proceed with the purchase process
     }
+     // JavaScript function to handle logistics process
+     function selectShippingMethod(method) {
+        document.getElementById('selected-method').innerHTML = `<p>Selected Shipping Method: <strong>${method}</strong></p>`;
+      }
 });
 
 });

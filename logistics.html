@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title> Logistics - Product Website </title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link rel="stylesheet" href="use.fontawesome.com/releases/v5.15.4/css/all.css">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+</head>
+<body>
+
+<div class="header">
+  <div class="container">
+    <div class="navbar">
+      <div class="logo">
+        <img src="img/HADG.png" width="125" alt="Logo">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html"> Home </a></li>
+          <li><a href="payment.html"> Payment and Accounting </a></li>
+          <li><a href="logistics.html"> Logistics</a></li>
+          <li><a href="customer_service.html"> Customer Service</a></li>
+          <li><a href="reports.html"> Reports</a></li>
+        </ul>
+      </nav>
+      <img src="img/cart button.png" width="30px" height="30px" alt="Cart">
+    </div>
+    <div class="row">
+      <div class="col-2">
+        <h1>Peachy Threads:<br>Trendy chic!</h1>
+        <p>Shop trendy aesthetic croptops on our <br>site for all your fashion needs</p>
+        <a href="" class="btn"> Explore Now &#8594; </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<body>
+
+    <div class="container">
+      <h2>Shipping Information</h2>
+      
+      <div class="shipping-methods">
+        <div class="shipping-method">
+          <h3>Standard Shipping</h3>
+          <p>Estimated delivery: 5-7 days</p>
+          <p>Rate: $5.99</p>
+          <button onclick="selectShippingMethod('Standard Shipping')">Select</button>
+        </div>
+        <div class="shipping-method">
+          <h3>Express Shipping</h3>
+          <p>Estimated delivery: 2-3 days</p>
+          <p>Rate: $12.99</p>
+          <button onclick="selectShippingMethod('Express Shipping')">Select</button>
+        </div>
+        <div class="shipping-method">
+          <h3>Overnight Shipping</h3>
+          <p>Estimated delivery: Next day</p>
+          <p>Rate: $24.99</p>
+          <button onclick="selectShippingMethod('Overnight Shipping')">Select</button>
+        </div>
+      </div>
+    
+      <div id="selected-method"></div>
+    </div>
+    
+
+<footer>
+  <div class="container">
+    <p>&copy; 2024 Product Website. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
