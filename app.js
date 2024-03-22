@@ -42,6 +42,23 @@ document.addEventListener("DOMContentLoaded", function() {
             processPayment(); // Call the function to process payment
         });
     }
+    function addToCart(productName, price) {
+        // Here you can implement your logic to add the product to the cart
+        // For demonstration purposes, let's just log the product details to console
+        console.log("Product added to cart:");
+        console.log("Name: " + productName);
+        console.log("Price: $" + price);
+        // You can also redirect the user to the cart page or show a notification confirming the addition
+    }
+     // Function to handle buy now button
+     function buyNow(productName, price) {
+        // Here you can implement your logic for the buy now functionality
+        // For demonstration purposes, let's just log the product details to console
+        console.log("Buy now clicked:");
+        console.log("Name: " + productName);
+        console.log("Price: $" + price);
+        // You can also redirect the user to the checkout page or proceed with the purchase process
+    }
 });
 
 });

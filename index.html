@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title> Product Website </title>
+<title>Product Website </title>
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -15,25 +15,23 @@
 <div class="container">
 <div class="navbar">
 <div class="logo">
-<img src="img/HADG.png" width="125 px">
+<img src="img/images.png" width="50 px">
 </div>
-<div class="button-container">
 <nav>
-    <ul>
-      <li><a href="index.html"> Home </a></li>
-      <li><a href="payment.html"> Payment and Accounting </a></li>
-      <li><a href="logistics.html"> Logistics</a></li>
-      <li><a href="customer_service.html"> Customer Service</a></li>
-      <li><a href="reports.html"> Reports</a></li>
-    </ul>
-  </nav>
-  
-<img src="img/cart button.png" width="30px" height="30px">
+<ul>
+<li><a href="index.html"> Home </a></li>
+<li><a href="payment.html"> Payment and Accounting </a></li>
+<li><a href="logistics.html"> Logistics</a></li>
+<li><a href="customer_service.html"> Customer Service</a></li>
+<li><a href="reports.html"> Reports</a></li>
+</ul>
+</nav>
+<img src="img/download.png" width="30px" height="30px">
 </div>
 <div class="row">
 <div class="col-2">
-<h1>Peachy Threads:<br>Trendy chic!</h1>
-<p>Shop trendy aesthetic croptops on our <br>site for all your fashion needs</p>
+<h1>Yummy Tuna:<br>Life with Tuna Sandwich!</h1>
+<p>Buy for our Yummy Tuna Sandwich on our <br>site for your Tummy needs</p>
 <a href=""  class="btn"> Explore Now &#8594; </a>
 </div>
 </div>
@@ -46,13 +44,13 @@
 <div class="small-container">
 <div class="row">
 <div class="col-3">
-<img src="img/image 2.jpg">
+<img src="img/01.jpg">
 </div>
 <div class="col-3">
-<img src="img/rmvr2.webp">
+<img src="img/02.jpg">
 </div>
 <div class="col-3">
-<img src="img/hahaah.webp">
+<img src="img/03.jpg">
 </div>
 </div>
 </div>
@@ -64,8 +62,8 @@
 <h2 class="title"> Featured Products</h2>
 <div class="row">
 <div class="col-4">
-<img src="img/431100965_353534543671922_5469763584189103011_n.jpg">
-<h4>Floral Tops</h4>
+<img src="img/05.jpg">
+<h4>Tuna Sandwich Version One</h4>
 
 <div class="rating">
     <i class="fa fa-star"></i>
@@ -76,11 +74,14 @@
     <i class="fa fa-star-o"></i>
 </div>
 <p>70.00</p>
+<button class="add-to-cart-btn" onclick="addToCart('Tuna Sandwich Version One', 70.00)">Add to Cart</button>
+<button class="buy-now-btn" onclick="buyNow('Tuna Sandwich Version One', 70.00)">Buy Now</button>
+</div>
 </div>
 
 <div class="col-4">
-<img src="img/431170111_1052111425858054_3175910229515670603_n.jpg">
-<h4>Mini Heart Tops</h4>
+<img src="img/06.jpg">
+<h4>Tuna Sandwich Version 1.1</h4>
 <div class="rating">
 <i class="fa fa-star"> </i>
 <i class="fa fa-star"> </i>
@@ -90,13 +91,14 @@
 
 </div>
 <p>65.00</p>
+<button class="add-to-cart-btn" onclick="addToCart('Tuna Sandwich Version 1.1', 65.00)">Add to Cart</button>
+<button class="buy-now-btn" onclick="buyNow('Tuna Sandwich Version 1.1', 65.00)">Buy Now</button>
 </div>
 
 <div class="col-4">
-<img src="img/431342707_875083427387805_5429361695973722078_n.jpg">
-<h4>Such cute Tops</h4>
+<img src="img/07.jpg">
+<h4>Tuna Sandwich Version 1.2</h4>
 <div class="rating">
-<i class="fa fa-star"> </i>
 <i class="fa fa-star"> </i>
 <i class="fa fa-star"> </i>
 <i class="fa fa-star"> </i>
@@ -104,11 +106,13 @@
 
 </div>
 <p>85.00</p>
+<button class="add-to-cart-btn" onclick="addToCart('Tuna Sandwich Version 1.2', 85.00)">Add to Cart</button>
+<button class="buy-now-btn" onclick="buyNow('Tuna Sandwich Version 1.2', 85.00)">Buy Now</button>
 </div>
 
 <div class="col-4">
-<img src="img/431354579_931663951606076_4235310942906013365_n.jpg">
-<h4>Blue flower Tops</h4>
+<img src="img/08.jpg"  >
+<h4>Tuna Sandwich Version 2</h4>
 <div class="rating">
 <i class="fa fa-star"> </i>
 <i class="fa fa-star"> </i>
@@ -118,12 +122,15 @@
 
 </div>
 <p>80.00</p>
+<button class="add-to-cart-btn" onclick="addToCart('Tuna Sandwich Version 2', 80.00)">Add to Cart</button>
+<button class="buy-now-btn" onclick="buyNow('Tuna Sandwich Version 2', 80.00)">Buy Now</button>
 </div>
 </div>
+
 <h2 class="title">Latest Products</h2>
 <div class="row">
 <div class="col-4">
-<img src="img/brown.jpeg">
+<img src="img/09.jpg">
 <h4>Brown Tops</h4>
 <div class="rating">
 <i class="fa fa-star"> </i>
@@ -134,10 +141,12 @@
 
 </div>
 <p>50.00</p>
+<button class="add-to-cart-btn" onclick="addToCart('Tuna Sandwich Version 1.1', 65.00)">Add to Cart</button>
+<button class="buy-now-btn" onclick="buyNow('Tuna Sandwich Version 1.1', 65.00)">Buy Now</button>
 </div>
 
 <div class="col-4">
-<img src="img/batch 2.jpg">
+<img src="img/10.jpg">
 <h4>White hart Tops</h4>
 <div class="rating">
 <i class="fa fa-star"> </i>
@@ -148,10 +157,12 @@
 
 </div>
 <p>60.00</p>
+<button class="add-to-cart-btn" onclick="addToCart('Tuna Sandwich Version 1.1', 65.00)">Add to Cart</button>
+<button class="buy-now-btn" onclick="buyNow('Tuna Sandwich Version 1.1', 65.00)">Buy Now</button>
 </div>
 
 <div class="col-4">
-<img src="img/batch 3.jpg">
+<img src="img/11.jpg">
 <h4>Ray Colt Tops</h4>
 <div class="rating">
 <i class="fa fa-star"> </i>
@@ -162,10 +173,12 @@
 
 </div>
 <p>90.00</p>
+<button class="add-to-cart-btn" onclick="addToCart('Tuna Sandwich Version 1.1', 65.00)">Add to Cart</button>
+<button class="buy-now-btn" onclick="buyNow('Tuna Sandwich Version 1.1', 65.00)">Buy Now</button>
 </div>
 
 <div class="col-4">
-<img src="img/green.jpg">
+<img src="img/13.jpg">
 <h4>Mint Green Tops</h4>
 <div class="rating">
 <i class="fa fa-star"> </i>
@@ -176,8 +189,11 @@
 
 </div>
 <p>95.00</p>
+<button class="add-to-cart-btn" onclick="addToCart('Tuna Sandwich Version 1.1', 65.00)">Add to Cart</button>
+<button class="buy-now-btn" onclick="buyNow('Tuna Sandwich Version 1.1', 65.00)">Buy Now</button>
 </div>
 </div>
 </div>
+
 </body>
 </html>

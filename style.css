@@ -2,125 +2,152 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  }
-  body {
+}
+
+body {
   font-family: 'Poppins', san-serif;
-  }
-  .navbar {
+}
+
+.navbar {
   display: flex;
   align-items: center;
   padding: 20px;
-  
-  }
-  nav{
+}
+
+nav {
   flex: 1;
   text-align: right;
-  }
- 
-  nav ul {
+}
+
+nav ul {
   display: inline-block;
   list-style-type: none; 
   padding: 0;
   margin: 0;
-  }
-  nav ul li {
+}
+
+nav ul li {
   display: inline-block;
   margin-right: 20px;
+}
 
-  }
-  a {
+a {
   text-decoration: none;
-  color: #555
-  }
-  nav ul li a:hover {
-      color: blue; 
-    }
-  p {
   color: #555;
-  }
-  .container {
+}
+
+nav ul li a:hover {
+  color: blue; 
+}
+
+p {
+  color: #555;
+}
+
+.container {
   max-width: 1300px;
   margin: auto;
   padding-left: 25px;
   padding-right: 25px;
-  }
-  .row {
+}
+
+.row {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-around;
-  }
-  .col-2{
-  flex-basis: 50;
-  min-width: 300px;
-  }
-  .col-2 img {
+}
+
+.col-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%; /* Ensure the column takes up the full height */
+}
+
+.col-2 img {
   max-width: 100px;
   padding: 50px 0;
-  }
-  .col-2 h1 {
+}
+
+.col-2 h1 {
   font-size: 50px;
   line-height: 60px;
   margin: 25px 0;
-  }
-  .btn {
+}
+
+.btn {
   display: inline-block;
   background: #ff523b;
   color: #fff;
   padding: 8px 30px;
   margin: 30px 0; 
   border-radius: 30px;
-  
-  } 
-  .btn:hover {
+}
+
+.btn:hover {
   background: #563434;
-  }
-  .header {
-    background: radial-gradient(#070007, #ffd6d6);
-    background-image: url('/img/tunafish.jpg');
-    background-repeat: repeat repeat; /* Repeat image horizontally and vertically */
-    background-size: auto; /* Adjust as needed */
-    background-position: center; /* Adjust as needed */
-  }
-  
-  .header .row {
+}
+
+.header {
+  background: radial-gradient(#e481e4, #ffd6d6);
+  background-image: url('/img/tunafish.jpg');
+  background-repeat: repeat repeat;
+  background-size: auto;
+  background-position: center;
+}
+
+.header .row {
   margin-top: 70px;
-  }
-  .categories {
+}
+
+.categories {
   margin: 70px;
-  }
-  .col-3 {
+}
+
+.col-3 {
   flex-basis: 30%;
   min-width: 250px;
   margin-bottom: 30px;
-  }
-  .col-3 img {
+}
+
+.col-3 img {
   width: 100%;
-  }
-  .small-container {
+}
+
+.small-container {
   max-width: 1080px;
   margin: auto;
   padding-left: 25px;
   padding-right: 25px;
-  }
-  .col-4 {
+}
+
+.col-4 {
   flex-basis: 25%;
   padding: 10px;
   min-width: 200px;
   margin-bottom: 50px;
   transition: transform 0.5s;
-  }
-  .col-4 img {
-  width: 100%;
-  }
-  .title {
+}
+
+.col-4 img {
+  width: 150px;
+  height: auto;
+  /* Optionally, you can set a max-height to prevent images from becoming too tall */
+  max-height: 200px; /* Adjust this value as needed */
+}
+
+.title {
   text-align: center;
   margin: 0 auto 80px;
   position: relative;
   line-height: 60px;
   color: #555;
-  }
-  .title::after {
+}
+
+.title::after {
   content: ' ';
   background: #ff523b;
   width: 80px;
@@ -130,47 +157,51 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  }
-  h4 {
+}
+
+h4 {
   color: #555;
   font-weight: bold;
-  }
-  .col-4 p {
+}
+
+.col-4 p {
   font-size: 14px;
-  }
-  .rating .fa {
-  color: #ff523b;
-  }
-  .col-4:hover {
+}
+
+.rating .fa {
+  color: #faa089;
+}
+
+.col-4:hover {
   transform: translateY(-5px);
-  }
- 
-  /* Add this CSS to style the button container */
+}
+
+/* Style for the button container */
 .button-container {
-  background-color: beige;
-  padding: 10px; /* Adjust padding as needed */
-  border-radius: 3px; /* Optional: Add rounded corners */
-  display: flex; /* Make the container flexbox */
-  justify-content: space-between; /* Arrange buttons with equal space between */
+  position: absolute;
+  top: 50%; /* Place it at the vertical center */
+  right: 20px;
+  transform: translateY(-50%); /* Center vertically */
+
 }
 
 .button-container ul {
-  list-style-type: none; /* Remove default bullet points */
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .button-container ul li {
-  display: inline; /* Display buttons horizontally */
+  display: inline;
 }
 
 .button-container ul li a {
-  text-decoration: none; /* Remove underline from links */
-  color: black; /* Set text color */
-  padding: 5px 10px; /* Add padding to buttons */
+  text-decoration: none;
+  color: black;
+  padding: 5px 10px;
 }
 
 .button-container ul li a:hover {
-  background-color: #ddd; /* Change background color on hover */
-  border-radius: 5px; /* Optional: Add rounded corners on hover */
+  background-color: #ddd;
+  border-radius: 5px;
 }
