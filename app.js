@@ -3,7 +3,7 @@ function addToCart(productName, price) {
     fetch('/api/add-to-cart', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'data.json'
         },
         body: JSON.stringify({ productName, price })
     })
@@ -20,18 +20,26 @@ function buyNow(productName, price) {
     fetch('/api/checkout', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'data.json'
         },
         body: JSON.stringify({ productName, price })
     })
     .then(response => {
+        if (!response.ok) {
+            throw new Error('Failed to initiate payment process');
+        }
+        return response.json(); // assuming response is JSON
+    })
+    .then(data => {
         // Redirect user to payment gateway's checkout page
-        window.location.href = response.redirectUrl;
+        window.location.href = `payment.html${encodeURIComponent(data.redirectUrl)}`;
     })
     .catch(error => {
+        console.error('Error:', error);
         // Handle error
     });
 }
+
 
 document.addEventListener("DOMContentLoaded", function() {
   // Function to process payment and accounting

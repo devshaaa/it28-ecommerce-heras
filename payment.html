@@ -9,80 +9,205 @@
 <link rel="stylesheet" href="use.fontawesome.com/releases/v5.15.4/css/all.css">
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
 </head>
+  <body>
+
+    <div class="header">
+      <div class="container">
+        <div class="navbar">
+          </div>
+          <nav>
+            <ul>
+              <li><a href="index.html"> Home </a></li>
+              <li><a href="payment.html"> Payment and Accounting </a></li>
+              <li><a href="logistics.html"> Logistics</a></li>
+              <li><a href="customer_service.html"> Customer Service</a></li>
+              <li><a href="reports.html"> Reports</a></li>
+            </ul>
+          </nav>
+
+        </div>
+        <div class="row">
+          <div class="col-2">
+            <h1>Yummy Tuna:<br>Life with Tuna!</h1>
+            <p>Purchase our delicious tuna sandwich on our<br>
+                website for your stomach's need</p>
+            <a href="index.html" class="btn"> Explore Now &#8594; </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  <style>
+
+    /* Resetting default margin and padding for all elements */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Header and Navigation styles */
+    header {
+        background-color: #333;
+        color: #f0e6e6;
+        padding: 10px;
+        text-align: center;
+    }
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul li {
+        display: inline;
+        margin-right: 10px;
+    }
+
+    nav ul li a {
+        color: #000000;
+        text-decoration: none;
+    }
+
+    /* Form container */
+    .form-container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    /* Form title */
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* Form input fields */
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    label {
+        display: block;
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    select {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    /* Payment method container */
+    .payment-method-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .payment-method-container label {
+        font-weight: normal;
+    }
+
+    /* Submit button */
+    input[type="submit"] {
+        background-color: goldenrod;
+        color: rgb(3, 0, 0);
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+</style>
+</head>
 <body>
 
-<div class="header">
-<div class="container">
-<div class="navbar">
-<div class="logo">
-<img src="img/HADG.png" width="125 px">
+<div class="form-container">
+    <h1>Payment & Accounting</h1>
+    <form id="payment-form" action="/submit_payment" method="post">
+        <div class="form-group">
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="address">Delivery Address:</label>
+            <input type="text" id="address" name="address" required>
+        </div>
+        <div class="form-group">
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required>
+        </div>
+        <div class="form-group">
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country" required>
+        </div>
+        <div class="form-group">
+            <label for="Products">Product:</label>
+            
+            <select id="Products" name="Products" onchange="updatePrice()" required>
+                <option value="">Select Products</option>
+                <option value="Tuna Sandwich Version One">Tuna Sandwich Version One</option>
+                <option value="Vaporesso ECO NANO Pod System">Vaporesso ECO NANO Pod System</option>
+                <option value="Uwell Caliburn GK3 Pod System">Uwell Caliburn GK3 Pod System</option>
+                <option value="Geekvape Aegis Legend 2">Geekvape Aegis Legend 2</option>
+                <option value="Geekvape Aegis Legend 2">Geekvape Aegis Legend 2</option>
+                <option value="Geekvape Aegis Legend 2">Geekvape Aegis Legend 2</option>
+                <option value="Geekvape Aegis Legend 2">Geekvape Aegis Legend 2</option>
+                <option value="Geekvape Aegis Legend 2">Geekvape Aegis Legend 2</option>
+                
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" value="1" onchange="updatePrice()" required>
+        </div>
+        <div class="payment-method-container">
+            <label for="payment-method">Select Payment Method:</label>
+            <select id="payment-method" name="payment-method">
+                <option value="visa">Visa</option>
+                <option value="mastercard">Mastercard</option>
+                <option value="paypal">PayPal</option>
+            </select>
+        </div>
+        <input type="hidden" id="total-price" name="total-price">
+        <input type="button" value="Pay" onclick="redirectToLogistics()">
+    </form>
 </div>
-<nav>
-<ul>
-<li><a href="index.html"> Home </a></li>
-<li><a href="payment.html"> Payment and Accounting </a></li>
-<li><a href="logistics.html"> Logistics</a></li>
-<li><a href="customer_service.html"> Customer Service</a></li>
-<li><a href="reports.html"> Reports</a></li>
-</ul>
-</nav>
-<img src="img/cart button.png" width="30px" height="30px">
-</div>
-<div class="row">
-<div class="col-2">
-<h1>Yummy Tuna:<br>Life with Tuna!</h1>
-<p>Purchase our delicious tuna sandwich on our<br>
-  website for your stomach's need</p>
-<a href=""  class="btn"> Explore Now &#8594; </a>
-</div>
-</div>
-</div>
-</div>
-
- <!-- Product Selection -->
- <div>
-  <label for="product-select">Select Product:</label>
-  <select id="product-select">
-    <option value=70.00>Tuna Sandwich Version One</option>
-    <option value="product2">Product 2</option>
-    <option value="product3">Product 3</option>
-  </select>
-</div>
-
-<!-- Payment Form -->
-<div>
-  <label for="payment-amount">Enter Payment Amount:</label>
-  <input type="number" id="payment-amount">
-  <button onclick="processPayment()">Process Payment</button>
-</div>
-
-<!-- Accounting Information -->
-<div>
-  <h3>Accounting</h3>
-  <p>View financial reports:</p>
-  <button onclick="viewReports()">View Reports</button>
-</div>
-</section>
-
-
-
 <footer>
   <div class="container">
     <p>&copy; 2024 Product Website. All rights reserved.</p>
   </div>
-  <style>footer {
-  text-align: center; /* Center-align the text */
-  background-color: #f2f2f2; /* Example background color */
-  padding: 20px 0; /* Example padding */
-}
-
-footer .container {
-  width: 100%; /* Ensure full width */
-  max-width: 1200px; /* Example maximum width */
-  margin: 0 auto; /* Center the container horizontally */
-}
-</style>
+  
 </footer>
-
+<style>footer {
+    text-align: center; /* Center-align the text */
+    background-color: #f2f2f2; /* Example background color */
+    padding: 20px 0; /* Example padding */
+  }
+  
+  footer .container {
+    width: 100%; /* Ensure full width */
+    max-width: 1200px; /* Example maximum width */
+    margin: 0 auto; /* Center the container horizontally */
+  }
+  </style>
+<script>
+    function redirectToLogistics() {
+        window.location.href = "logistics.html";
+    }
+</script>
 </body>
 </html>

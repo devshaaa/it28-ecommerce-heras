@@ -37,7 +37,7 @@ a {
 }
 
 nav ul li a:hover {
-  color: blue; 
+  color: rgb(255, 255, 255); 
 }
 
 p {
@@ -92,11 +92,11 @@ p {
 }
 
 .header {
-  background: radial-gradient(#e481e4, #ffd6d6);
-  background-image: url('/img/tunafish.jpg');
-  background-repeat: repeat repeat;
-  background-size: auto;
-  background-position: center;
+  background: radial-gradient(#610e61, #ffd6d6);
+  background-image: url('/img/sandwich.jpg');
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-position: left;
 }
 
 .header .row {
@@ -118,27 +118,16 @@ p {
 }
 
 .small-container {
-  max-width: 1080px;
+  max-width: 1000px;
   margin: auto;
   padding-left: 25px;
   padding-right: 25px;
 }
-
 .col-4 {
-  flex-basis: 25%;
-  padding: 10px;
+  flex-basis: 30%;
   min-width: 200px;
-  margin-bottom: 50px;
-  transition: transform 0.5s;
+  margin-bottom: 30px;
 }
-
-.col-4 img {
-  width: 150px;
-  height: auto;
-  /* Optionally, you can set a max-height to prevent images from becoming too tall */
-  max-height: 200px; /* Adjust this value as needed */
-}
-
 .title {
   text-align: center;
   margin: 0 auto 80px;
@@ -157,6 +146,11 @@ p {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+}
+.col-4 img {
+  width: 150px; /* Sets the width of the images inside the flex items */
+  height: auto; /* Allows the height of the images to adjust proportionally based on the width */
+  max-height: 200px; /* Sets the maximum height of the images to prevent them from becoming too tall */
 }
 
 h4 {
